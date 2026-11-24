@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:#0E0E10;--surface:#18181B;--sidebar:#121214;--line:#26262B;--text:#F4F4F5;--muted:#A1A1AA;--accent:#9146FF;--cyan:#00D4FF;--red:#FF0000;--blurple:#5865F2;--safe-area-inset-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.font-display{font-family:"Space Grotesk",Inter,system-ui,sans-serif}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:#3F3F46;border-radius:99px}::-webkit-scrollbar-track{background:transparent}
+@keyframes wave{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.wave-bar{animation:wave 1s ease-in-out infinite;transform-origin:center}
+.rise{animation:rise .25s ease both}
+.pop{animation:pop .25s ease both}
+.live-dot{animation:pulse-dot 1.4s infinite}
+input,select,textarea{outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(145,70,255,.18)}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
+@media(max-width:640px){button{min-height:44px}button.sm-compact{min-height:32px}input,select,textarea{font-size:16px!important}}
